@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Proyecto Personal Fer</title>
+    <link rel="stylesheet" href="PiePag.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Logo y menús -->
+    <nav class="top-header">
+      <a href="#" class="logo">
+        <img height="50" width="70" src="logo/Logo.png" alt="Logo" />
+      </a>
+      <ol class="menu-horizontal">
+        <li><a href="#">Inicio</a></li>
+        <li>
+          <a href="#">Menú</a>
+          <ul class="menu-vertical">
+            <li><a href="#">Hamburguesa chica</a></li>
+            <li><a href="#">Hamburguesa mediana</a></li>
+            <li><a href="#">Hamburguesa grande</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contactar</a></li>
+        <li><a href="#">Ayuda</a></li>
+      </ol>
+    </nav>
+
+    <!-- Sección Inicio -->
+    <section class="seccion-inicio">
+      <div class="cont-general-inicio">
+        <div class="cont-inicio-text">
+          <h2>Inicio</h2>
+          <p>
+            La vida es demasiado corta para hamburguesas comunes. Ven y descubre
+            por qué somos el lugar de encuentro para los amantes de las
+            hamburguesas de verdad. Explora nuestro menú y descubre tus
+            favoritas, o atrévete a probar algo nuevo. ¡Te esperamos con la
+            mejor actitud y la mejor hamburguesa lista para ti!
+          </p>
+        </div>
+        <div class="cont-inicio-imagen">
+          <img src="logo/Hamburguesa.jpeg" alt="Hamburguesa" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección contacto -->
+    <section class="seccion-contacto">
+      <div class="cont-general-contacto">
+        <div class="cont-contacto-text">
+          <h2>¿Listo para la mejor hamburguesa de tu vida?</h2>
+          <p>
+            ¡La espera terminó! Haz tu pedido ahora, descubre nuestro menú y no
+            te pierdas las ofertas especiales que hemos preparado para ti. ¡Ver
+            el menú y pedir ahora!
+          </p>
+        </div>
+        <div class="cont-contacto-video">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/614tG1hqYtE"
+            title="Video de hamburguesas"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección Formulario -->
+    <section class="seccion-formulario">
+      <div class="div-cont-formulario">
+        <h2>Formulario de registro</h2>
+        <form action="#" method="post">
+          <div class="campo">
+            <label for="nombre">Nombres completos:</label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombre"
+              placeholder="Ingrese sus nombres"
+              required
+            />
+          </div>
+
+          <div class="campo">
+            <label for="pais">País:</label>
+            <select name="pais" id="pais" required>
+              <option value="">Seleccione un país</option>
+              <option value="Peru">Perú</option>
+              <option value="Ecuador">Ecuador</option>
+              <option value="Argentina">Argentina</option>
+              <option value="Brasil">Brasil</option>
+            </select>
+          </div>
+
+          <div class="campo">
+            <label>Intereses:</label>
+            <ul class="lista-checkbox">
+              <li>
+                <label
+                  ><input type="checkbox" name="intereses" value="tecnologia" />
+                  Tecnología</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="intereses" value="educacion" />
+                  Educación</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="intereses" value="deporte" />
+                  Deporte</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="intereses" value="arte" />
+                  Arte</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="checkbox" name="intereses" value="ciencia" />
+                  Ciencia</label
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div class="campo">
+            <label>Sexo:</label>
+            <ul class="lista-radio">
+              <li>
+                <label
+                  ><input type="radio" name="genero" value="masculino" />
+                  Masculino</label
+                >
+              </li>
+              <li>
+                <label
+                  ><input type="radio" name="genero" value="femenino" />
+                  Femenino</label
+                >
+              </li>
+            </ul>
+          </div>
+
+          <button type="submit">Enviar</button>
+        </form>
+        <p>Complete todos los campos</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="cont_text">
+          <h3>HotSpot!!!</h3>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="obtenerDocumento.pdf" target="_blank"
+            >Política de Privacidad</a
+          >
+          <a href="obtenerDocumento.pdf" target="_blank"
+            >Términos y Condiciones</a
+          >
+          <a href="obtenerDocumento.pdf" target="_blank">Protección de Datos</a>
+        </div>
+
+        <div class="footer-social">
+          <h4>Síguenos</h4>
+          <a href="#"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/512/145/145802.png"
+              alt="Facebook"
+              class="social-icon"
+          /></a>
+          <a href="#"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/512/145/145812.png"
+              alt="Instagram"
+              class="social-icon"
+          /></a>
+          <a href="#"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/512/145/145807.png"
+              alt="LinkedIn"
+              class="social-icon"
+          /></a>
+          <a href="#"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/512/145/145806.png"
+              alt="Twitter"
+              class="social-icon"
+          /></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
