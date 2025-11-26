@@ -1,35 +1,102 @@
 /* BOTÓN HAMBURGUESA (ESCONDE EN DESKTOP) */
 .menu-toggle {
-  display: flex; /* Oculto por defecto */
-  font-size: 2rem; /* Tamaño del ícono hamburguesa */
-  background: none; /* Sin fondo */
-  border: none; /* Sin bordes */
-  cursor: pointer; /* Manito al pasar el mouse */
-  margin-right: 1rem; /* Espacio entre el borde derecho */
+  display: none;
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  z-index: 1001;
+  transition: all 0.3s ease;
 }
 
-/* RESPONSIVE: MÓVILES */
+.menu-toggle:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+/* RESPONSIVE: MÓVILES Y TABLETS */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block; /* Mostrar botón hamburguesa en móviles */
-    color: black;
+    display: block !important; /* Mostrar botón hamburguesa en móviles */
+    order: 2; /* Colocar al final */
+    margin-left: auto; /* Empujar hacia la derecha */
+  }
+
+  .menu-horizontal {
+    display: none !important; /* Ocultar menú horizontal en móviles */
   }
 
   .Menu-Horizontal {
-    display: none; /* Ocultar menú horizontal por defecto */
-    flex-direction: column; /* Mostrarlo en vertical al activarse */
+    display: none;
+    flex-direction: column;
     width: 100%;
-    background-color: white;
-    position: absolute;
-    top: 5rem; /* Debajo del menú fijo */
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    position: fixed;
+    top: 5.625rem;
     left: 0;
+    right: 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border-top: 3px solid #e63946;
   }
 
   .Menu-Horizontal.active {
-    display: flex; /* Mostrar menú al activar la clase */
+    display: flex !important; /* Mostrar menú al activar la clase */
   }
 
   .Menu-Horizontal li {
-    border-bottom: 1px solid #ccc; /* Líneas separadoras */
+    border-bottom: 1px solid #e9ecef;
+    padding: 1.25rem 1.5rem;
+    width: 100%;
+    transition: all 0.3s ease;
+  }
+
+  .Menu-Horizontal li:hover {
+    background-color: #f8f9fa;
+    padding-left: 2rem;
+  }
+
+  .Menu-Horizontal li a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #1d3557;
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+
+  .Menu-Horizontal li:hover a {
+    color: #e63946;
+  }
+
+  /* Submenú vertical en móviles */
+  .Menu-Horizontal .menu-vertical {
+    position: static;
+    display: none;
+    width: 100%;
+    background-color: #f9f9f9;
+    box-shadow: none;
+    margin-top: 0.5rem;
+    padding-left: 1rem;
+  }
+
+  .Menu-Horizontal li:hover .menu-vertical,
+  .Menu-Horizontal li:active .menu-vertical {
+    display: block;
+  }
+
+  .Menu-Horizontal .menu-vertical li {
+    border-bottom: 1px solid #e8e8e8;
+    padding: 0.75rem 1rem;
+  }
+
+  .Menu-Horizontal .menu-vertical li:last-child {
+    border-bottom: none;
   }
 }

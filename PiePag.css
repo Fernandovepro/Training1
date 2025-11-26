@@ -1,9 +1,21 @@
 /* Footer general */
 .footer {
-  background-color: #222; /* Fondo oscuro para contraste */
+  background: linear-gradient(135deg, #1d3557 0%, #457b9d 100%);
   color: white;
-  padding: 2rem 1rem;
-  font-family: "Roboto", sans-serif;
+  padding: 3rem 1rem;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #e63946 0%, #f77f00 100%);
 }
 
 /* Contenedor flexible para 3 columnas */
@@ -23,6 +35,24 @@
   min-width: 200px;
 }
 
+.cont_text h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #fcbf49 0%, #f77f00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.footer-links h4,
+.footer-social h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #fcbf49;
+}
+
 .footer-logo {
   width: 60px;
   height: auto;
@@ -36,41 +66,64 @@
 
 .footer-links a {
   display: block;
-  color: #ccc;
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  margin: 0.3rem 0;
+  margin: 0.5rem 0;
+  transition: all 0.3s ease;
+  padding: 0.25rem 0;
 }
 
 .footer-links a:hover {
-  color: #ad2929;
+  color: #fcbf49;
+  padding-left: 0.5rem;
 }
 
-/* Redes sociales con íconos */
 .footer-social {
   flex: 1;
   min-width: 200px;
 }
 
 .social-icon {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
   margin-right: 0.5rem;
-  transition: transform 0.2s ease-in-out;
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  padding: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .social-icon:hover {
-  transform: scale(1.2);
+  transform: translateY(-5px) scale(1.1);
+  background: rgba(252, 191, 73, 0.3);
 }
 
 /* Responsive para pantallas pequeñas */
 @media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+
   .footer-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    gap: 1.5rem;
   }
 
-  .footer-social img {
-    margin-bottom: 0.5rem;
+  .footer-links,
+  .footer-social {
+    min-width: 100%;
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .social-icon {
+    margin-right: 0;
+    margin-bottom: 0;
   }
 }
