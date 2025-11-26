@@ -461,7 +461,6 @@ button {
 button:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
-  background: linear-gradient(135deg, #d62839 0%, #e63946 100%);
 }
 
 button:active {
