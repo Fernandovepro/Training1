@@ -1,3 +1,11 @@
+/* Importar Google Fonts poco comunes */
+@import url("https://fonts.googleapis.com/css2?family=Wellfleet&display=swap");
+
+/* Fuente global aplicada a toda la página */
+body {
+  font-family: "Wellfleet", sans-serif;
+}
+
 .top-header {
   position: fixed;
   background-color: rgb(245, 245, 245);

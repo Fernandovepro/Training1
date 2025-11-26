@@ -7,6 +7,7 @@
     <title>Proyecto Personal Fer</title>
     <link rel="stylesheet" href="PiePag.css" />
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="menu_toggle.css" />
   </head>
 
   <body>
@@ -16,6 +17,12 @@
         <img height="50" width="70" src="logo/Logo.png" alt="Logo" />
       </a>
       <ol class="menu-horizontal">
+      <!-- BOTÓN HAMBURGUESA -->
+      <button class="menu-toggle" aria-label="Abrir menú">
+        &#9776;
+        <!-- Ícono de hamburguesa -->
+      </button>
+      <ol class="menu-horizontal Menu-Horizontal">
         <li><a href="#">Inicio</a></li>
         <li>
           <a href="#">Menú</a>
@@ -207,5 +214,6 @@
         </div>
       </div>
     </footer>
+    <script src="menu_toggle.js"></script>
   </body>
 </html>
