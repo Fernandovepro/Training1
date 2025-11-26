@@ -1,15 +1,36 @@
-// Selecciona el botón de hamburguesa
-const btn = document.querySelector(".menu-toggle");
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.querySelector(".menu-toggle");
 
-// Selecciona el menú horizontal
-const menu = document.querySelector(".Menu-Horizontal");
+  const menu = document.querySelector(".Menu-Horizontal");
 
-// Al hacer clic en el botón de hamburguesa
-btn.addEventListener("click", () => {
-  // Alterna (agrega o quita) la clase "active" en el menú
-  // Esto hace que se muestre o se oculte
-  menu.classList.toggle("active");
+  // Verificar que ambos elementos existan
+  if (btn && menu) {
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
 
-  // (opcional) También puedes alternar una clase en el botón si quieres cambiar su apariencia
-  // btn.classList.toggle("open");
+    const allMenuItems = menu.querySelectorAll("li");
+
+    allMenuItems.forEach((menuItem) => {
+      const submenu = menuItem.querySelector(".menu-vertical");
+
+      if (submenu) {
+        const menuLink = menuItem.querySelector("a");
+
+        if (menuLink) {
+          menuLink.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            allMenuItems.forEach((item) => {
+              if (item !== menuItem) {
+                item.classList.remove("submenu-open");
+              }
+            });
+
+            menuItem.classList.toggle("submenu-open");
+          });
+        }
+      }
+    });
+  }
 });

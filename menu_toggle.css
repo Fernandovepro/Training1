@@ -2,19 +2,21 @@
 .menu-toggle {
   display: none;
   font-size: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0.5rem;
   cursor: pointer;
   color: white;
   padding: 0.5rem 0.75rem;
   z-index: 1001;
-  transition: all 0.3s ease;
 }
 
 /* RESPONSIVE: MÓVILES Y TABLETS */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block !important;
-    order: 2;
-    margin-left: auto;
+    display: block !important; /* Mostrar botón hamburguesa en móviles */
+    order: 2; /* Colocar al final */
+    margin-left: auto; /* Empujar hacia la derecha */
   }
 
   .menu-horizontal {
@@ -76,11 +78,15 @@
     box-shadow: none;
     margin-top: 0.5rem;
     padding-left: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
   }
 
-  .Menu-Horizontal li:hover .menu-vertical,
-  .Menu-Horizontal li:active .menu-vertical {
+  .Menu-Horizontal li.submenu-open .menu-vertical {
     display: block;
+    max-height: 500px;
+    padding: 0.5rem 0 0.5rem 1rem;
   }
 
   .Menu-Horizontal .menu-vertical li {
